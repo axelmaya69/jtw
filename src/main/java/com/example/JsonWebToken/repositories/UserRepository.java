@@ -1,8 +1,9 @@
 package com.example.JsonWebToken.repositories;
 
 
+
+import com.example.JsonWebToken.entities.User;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
