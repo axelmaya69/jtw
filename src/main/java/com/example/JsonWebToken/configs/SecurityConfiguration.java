@@ -34,18 +34,8 @@ public class SecurityConfiguration {
                 authorizeRequest.requestMatchers("/auth/**")
                         .permitAll()
                         .anyRequest().authenticated()
-
-
                 )
-                .authorizeHttpRequests()
-                .requestMatchers("/auth/**")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
-                .and()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
+                .httpBasic()
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
