@@ -33,7 +33,8 @@ public class SecurityConfiguration {
         http.authorizeHttpRequests( authorizeRequest ->
                 authorizeRequest.requestMatchers("/auth/**")
                         .permitAll()
-                
+                        .anyRequest().authenticated()
+
 
                 )
                 .authorizeHttpRequests()
