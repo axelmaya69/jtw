@@ -13,5 +13,7 @@ public class RegisterUserDto  {
     @Setter
     private String password;
 
+    @Getter
+    @Setter
     private String fullName;
 }
