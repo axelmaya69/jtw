@@ -1,4 +1,4 @@
 package com.example.JsonWebToken.dtos;
 
-public class RegisterUserDto {
+public class RegisterUserDto  {
 }
