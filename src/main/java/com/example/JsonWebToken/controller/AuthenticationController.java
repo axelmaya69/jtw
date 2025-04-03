@@ -3,6 +3,7 @@ package com.example.JsonWebToken.controller;
 import com.example.JsonWebToken.dtos.LoginUserDto;
 import com.example.JsonWebToken.dtos.RegisterUserDto;
 import com.example.JsonWebToken.entities.User;
+import com.example.JsonWebToken.responses.LoginResponse;
 import com.example.JsonWebToken.services.AuthenticationService;
 import com.example.JsonWebToken.services.JwtService;
 import org.springframework.http.ResponseEntity;
@@ -37,7 +38,9 @@ public class AuthenticationController {
 
         String jwtToken = jwtService.generateToken(authenticatedUser);
 
-        LoginResponse loginResponse = new LoginResponse().setToken(jwtToken).setExpiresIn(jwtService.getExpirationTime());
+        LoginResponse loginResponse = new LoginResponse();
+        loginResponse.setToken(jwtToken);
+        loginResponse.setExpiresIn(jwtService.getExpirationTime());
 
         return ResponseEntity.ok(loginResponse);
     }

@@ -12,6 +12,7 @@ public class LoginResponse {
     @Setter
     private long expiresIn;
 
+
     public String getToken() {
         return token;
     }
