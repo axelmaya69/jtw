@@ -1,5 +1,6 @@
 package com.example.JsonWebToken.controller;
 
+import com.example.JsonWebToken.entities.User;
 import com.example.JsonWebToken.services.AuthenticationService;
 import com.example.JsonWebToken.services.JwtService;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +27,7 @@ public class AuthenticationController {
         User registeredUser = authenticationService.signup(registerUserDto);
 
         return ResponseEntity.ok(registeredUser);
-    }
+     }
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> authenticate(@RequestBody LoginUserDto loginUserDto) {
