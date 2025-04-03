@@ -1,5 +1,7 @@
 package com.example.JsonWebToken.controller;
 
+import com.example.JsonWebToken.dtos.LoginUserDto;
+import com.example.JsonWebToken.dtos.RegisterUserDto;
 import com.example.JsonWebToken.entities.User;
 import com.example.JsonWebToken.services.AuthenticationService;
 import com.example.JsonWebToken.services.JwtService;
