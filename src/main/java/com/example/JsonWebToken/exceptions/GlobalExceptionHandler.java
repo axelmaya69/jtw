@@ -26,7 +26,7 @@ public class GlobalExceptionHandler {
         }
         if (exception instanceof AccountStatusException) {
             errorDetail = ProblemDetail.forStatusAndDetail(HttpStatusCode.valueOf(403), exception.getMessage());
-            errorDetail.setProperty("description", "The account is locked");
+            errorDetail.setProperty("description", "La cuenta está bloqueada");
         }
 
         if (exception instanceof AccessDeniedException) {
