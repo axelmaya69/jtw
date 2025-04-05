@@ -31,7 +31,7 @@ public class GlobalExceptionHandler {
 
         if (exception instanceof AccessDeniedException) {
             errorDetail = ProblemDetail.forStatusAndDetail(HttpStatusCode.valueOf(403), exception.getMessage());
-            errorDetail.setProperty("description", "You are not authorized to access this resource");
+            errorDetail.setProperty("description", "No estás autorizado para acceder a este recurso");
         }
 
         if (exception instanceof SignatureException) {
