@@ -3,6 +3,7 @@ package com.example.JsonWebToken.dtos;
 import lombok.Getter;
 import lombok.Setter;
 
+//clase para ayudar a registrar un usuario
 public class RegisterUserDto  {
 
     @Getter
