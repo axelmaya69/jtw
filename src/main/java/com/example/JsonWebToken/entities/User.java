@@ -17,6 +17,8 @@ import java.util.List;
 //se crea la entidad usuario
 @Table(name = "users")
 @Entity
+//se jhace uso de la libreria por defecto de springboot
+//user Details
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
