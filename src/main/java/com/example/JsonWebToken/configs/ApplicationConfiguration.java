@@ -24,6 +24,8 @@ public class ApplicationConfiguration {
         this.userRepository = userRepository;
     }
 
+    //configurando el bean para encontar por email
+    //y lanzar una exceptcion si no se encuentra
     @Bean
     UserDetailsService userDetailsService() {
         return username -> userRepository.findByEmail(username)
