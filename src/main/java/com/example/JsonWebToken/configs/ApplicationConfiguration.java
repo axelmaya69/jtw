@@ -46,7 +46,9 @@ public class ApplicationConfiguration {
         return config.getAuthenticationManager();
     }
 
-    
+    //Este método crea y registra el componente que Spring Security usará para autenticar usuarios con:
+    //Un servicio que busca usuarios.
+    //Un encoder que compara contraseñas.
     @Bean
     AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
