@@ -39,6 +39,8 @@ public class ApplicationConfiguration {
         return new BCryptPasswordEncoder();
     }
 
+    //implementando otro metodo de spring boot por defecto para
+    //autenticar usuarios (con credenciales) y los deja pasar o no
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
