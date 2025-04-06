@@ -15,8 +15,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //agregando notacion @Conigutation
 @Configuration
 public class ApplicationConfiguration {
+
+    //implementando la interaz userrepository
     private final UserRepository userRepository;
 
+    //inyectando sus dependencias
     public ApplicationConfiguration(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
