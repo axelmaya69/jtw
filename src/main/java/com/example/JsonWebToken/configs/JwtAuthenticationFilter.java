@@ -34,6 +34,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         //implementando un referenciado a la interfaz UserDetailService
         private final UserDetailsService userDetailsService;
 
+        //se inyectan sus dependencias a traves de un metodo
     public JwtAuthenticationFilter(
                 JwtService jwtService,
                 UserDetailsService userDetailsService,
@@ -44,6 +45,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             this.handlerExceptionResolver = handlerExceptionResolver;
         }
 
+        //se hace uso de los metodos predefinidos
         @Override
         protected void doFilterInternal(
                 @NonNull HttpServletRequest request,
