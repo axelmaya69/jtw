@@ -19,11 +19,19 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 
 import java.io.IOException;
 
+
+//Se declara la notacion component y se heredan componentes
+//de la libreria de spring onceperquequestfilter
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
+
+        //implementando un referenciado a la interfaz HandlerExceptionResolver
         private final HandlerExceptionResolver handlerExceptionResolver;
 
+        //implementando un referenciado a la clase JWTService
         private final JwtService jwtService;
+
+        //implementando un referenciado a la interfaz UserDetailService
         private final UserDetailsService userDetailsService;
 
     public JwtAuthenticationFilter(
