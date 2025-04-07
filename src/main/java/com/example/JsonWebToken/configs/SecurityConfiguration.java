@@ -52,7 +52,8 @@ public class SecurityConfiguration {
 
         return http.build();
     }
-
+    //Creando y configurando otro bean para definir a donde va
+    //a apuntar y unicamente que tipos de peticiones acepta
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
