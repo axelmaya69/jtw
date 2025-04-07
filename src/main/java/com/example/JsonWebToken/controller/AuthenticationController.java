@@ -38,7 +38,8 @@ public class AuthenticationController {
 
         return ResponseEntity.ok(registeredUser);
      }
-
+    //Añadiendo la primera notacion para logearse, pidiendo los datos mediante un
+    //request body de la clase LoginUserDto y asignandole un jwt
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> authenticate(@RequestBody LoginUserDto loginUserDto) {
         User authenticatedUser = authenticationService.authenticate(loginUserDto);
