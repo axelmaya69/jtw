@@ -45,7 +45,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             this.handlerExceptionResolver = handlerExceptionResolver;
         }
 
-        //se hace uso de los metodos predefinidos
+        //se hace uso de los metodos predefinidos o que ya vienen en spring boot
         @Override
         protected void doFilterInternal(
                 @NonNull HttpServletRequest request,
