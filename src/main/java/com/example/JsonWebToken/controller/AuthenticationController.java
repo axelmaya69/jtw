@@ -18,10 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AuthenticationController {
 
+    //referencnando la clase jwtservice
     private final JwtService jwtService;
 
+    //referencnando la clase authenticationService
     private final AuthenticationService authenticationService;
 
+    //Inyectando sus dependencias
     public AuthenticationController(JwtService jwtService, AuthenticationService authenticationService) {
         this.jwtService = jwtService;
         this.authenticationService = authenticationService;
