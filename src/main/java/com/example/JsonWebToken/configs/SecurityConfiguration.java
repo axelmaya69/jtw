@@ -15,11 +15,15 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.List;
 
-//Definiendo las notaciones 
+//Definiendo las notaciones
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
+
+    //referenciando la libreria por defecto de spring security
     private final AuthenticationProvider authenticationProvider;
+
+    //referenciando la clase definida como jwtauthenticationFilter creada previamente
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     public SecurityConfiguration(
