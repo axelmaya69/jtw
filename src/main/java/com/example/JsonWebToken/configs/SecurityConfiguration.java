@@ -26,6 +26,7 @@ public class SecurityConfiguration {
     //referenciando la clase definida como jwtauthenticationFilter creada previamente
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
+    //Inyectando sus dependencias
     public SecurityConfiguration(
             JwtAuthenticationFilter jwtAuthenticationFilter,
             AuthenticationProvider authenticationProvider
@@ -34,6 +35,7 @@ public class SecurityConfiguration {
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
     }
 
+    //Creando y configurando el bean
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests( authorizeRequest ->
