@@ -30,6 +30,8 @@ public class AuthenticationController {
         this.authenticationService = authenticationService;
     }
 
+    //Añadiendo la primera notacion para registrarse, pidiendo los datos mediante un
+    //request body de la clase RegisterUserDto
     @PostMapping("/signup")
     public ResponseEntity<User> register(@RequestBody RegisterUserDto registerUserDto) {
         User registeredUser = authenticationService.signup(registerUserDto);
