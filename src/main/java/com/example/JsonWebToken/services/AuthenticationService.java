@@ -22,6 +22,8 @@ public class AuthenticationService {
 
     private final AuthenticationManager authenticationManager;
 
+
+    //se inyectan sus dependencias.
     public AuthenticationService(
             UserRepository userRepository,
             AuthenticationManager authenticationManager,
