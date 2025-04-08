@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 //clase para ayudar a registrar un usuario
+//implementando inyeccion de dependencias,
+//aqui se pasa el email, la contraseña y un nombre completo
 public class RegisterUserDto  {
 
     @Getter
