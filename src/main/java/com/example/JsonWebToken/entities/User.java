@@ -18,7 +18,8 @@ import java.util.List;
 @Table(name = "users")
 @Entity
 //se jhace uso de la libreria por defecto de springboot
-//user Details
+//user Details y se aplican sus metodos por defecto que
+//vienen hasta abajo, como el de bloquear, activo, etc.
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
