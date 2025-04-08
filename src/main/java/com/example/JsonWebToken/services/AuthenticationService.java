@@ -10,8 +10,12 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+//Se añade la notacion Service para indicarle que es un servicio.
 @Service
 public class AuthenticationService {
+
+    //se referencian las diferentes clases o intefaces.
+    //que da spring boot o que fueron creadas
     private final UserRepository userRepository;
 
     private final PasswordEncoder passwordEncoder;
