@@ -27,7 +27,7 @@ public class JwtService {
     @Value("${security.jwt.expiration-time}")
     private long jwtExpiration;
 
-    
+    //Se crean los metodos necesarios para validar/generar y construir los tokens para el usuario.
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
