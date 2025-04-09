@@ -16,8 +16,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+//se agrega la notacion service
 @Service
 public class JwtService {
+    //se importan las credenciales de la llave secreta en application.properties
     @Value("${security.jwt.secret-key}")
     private String secretKey;
 
