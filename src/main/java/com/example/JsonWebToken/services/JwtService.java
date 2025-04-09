@@ -23,9 +23,11 @@ public class JwtService {
     @Value("${security.jwt.secret-key}")
     private String secretKey;
 
+    //se importa el dato que tiene el tiempo de expiracion del token
     @Value("${security.jwt.expiration-time}")
     private long jwtExpiration;
 
+    
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
