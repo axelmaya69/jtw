@@ -45,7 +45,7 @@ public class AuthenticationService {
         return userRepository.save(user);
 
     }
-
+    //Se crea un metodo para autenticar al usuario, en esta 
     public User authenticate(LoginUserDto input) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
