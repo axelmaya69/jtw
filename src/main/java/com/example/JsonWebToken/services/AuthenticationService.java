@@ -47,6 +47,7 @@ public class AuthenticationService {
     }
     //Se crea un metodo para autenticar al usuario, en este metodo
     //se obtienen la contraseña y email del usuario y se autentica
+    //para devolver si es valido o no
     public User authenticate(LoginUserDto input) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
