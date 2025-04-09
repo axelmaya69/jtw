@@ -33,7 +33,8 @@ public class AuthenticationService {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
-    //Se crea un metodo para registrar usuarios
+    //Se crea un metodo para registrar usuarios en el cual se obtienen
+    //los datos de la clase RegisterUserDto
     public User signup(RegisterUserDto input) {
         User user = new User();
                 user.setFullName(input.getFullName());
