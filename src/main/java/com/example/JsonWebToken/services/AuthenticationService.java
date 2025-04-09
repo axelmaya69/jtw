@@ -34,7 +34,8 @@ public class AuthenticationService {
         this.passwordEncoder = passwordEncoder;
     }
     //Se crea un metodo para registrar usuarios en el cual se obtienen
-    //los datos de la clase RegisterUserDto
+    //los datos de la clase RegisterUserDto agregandole un nombre, email
+    //y password, para finalmente guardarlo.
     public User signup(RegisterUserDto input) {
         User user = new User();
                 user.setFullName(input.getFullName());
